@@ -1,3 +1,5 @@
 ray
 tqdm
+numpy
+cloudpickle
 saveable-objects
