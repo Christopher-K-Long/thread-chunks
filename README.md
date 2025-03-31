@@ -1,9 +1,11 @@
 # thread-chunks
-A python package for performing memory intensive computations in parallel using chunks and checkpointing.
+A Python package for performing memory-intensive computations in parallel using chunks and checkpointing.
+
+[![Unit Tests](https://github.com/Christopher-K-Long/thread-chunks/actions/workflows/test-python-package.yml/badge.svg)](https://github.com/Christopher-K-Long/thread-chunks/actions/workflows/test-python-package.yml)
 
 ## Installation
 
-The python package can be installed with pip as follows:
+The Python package can be installed with pip as follows:
 ```bash
 pip install thread-chunks
 ```
