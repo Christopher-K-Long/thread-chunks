@@ -1,5 +1,7 @@
 ray
 tqdm
+numpy
+cloudpickle
 saveable-objects
 myst-parser
 git+https://github.com/bayashi-cl/stubdoc
