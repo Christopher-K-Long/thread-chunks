@@ -9,6 +9,11 @@ pip install thread-chunks
 ```
 
 ### Requirements:
+
+Python >= 3.7
+
+Packages:
+
 - [ray](https://www.ray.io/)
 - [tqdm](https://tqdm.github.io/)
 - [saveable-objects](https://saveable-objects.readthedocs.io/)
@@ -24,5 +29,5 @@ Source code can be found at: [https://github.com/Christopher-K-Long/thread-chunk
 
 ## Version and Changes
 
-The current version is [`1.0.0`](ChangeLog.md#release-100). Please see the [Change Log](ChangeLog.md) for more
+The current version is [`1.0.1`](ChangeLog.md#release-101). Please see the [Change Log](ChangeLog.md) for more
 details.
