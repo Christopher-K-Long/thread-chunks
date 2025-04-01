@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: thread-chunks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Christopher K.
+    family-names: Long
+    email: ckl45@cam.ac.uk
+    affiliation: University of Cambridge
+    orcid: 'https://orcid.org/0009-0001-3230-942X'
+repository-code: 'https://github.com/Christopher-K-Long/thread-chunks'
+url: 'https://thread-chunks.readthedocs.io'
+repository: 'https://pypi.org/project/thread-chunks'
+abstract: >-
+  A python package for performing memory intensive computations in parallel
+  using chunks and checkpointing.
+keywords:
+  - thread
+  - threading
+  - multithreading
+  - parallel
+  - parallelisation
+  - checkpointing
+  - chunk
+  - chunking
+  - chunks
+license: Apache-2.0
+version: v1.0.2
+date-released: '2025-04-01'

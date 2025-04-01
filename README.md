@@ -10,6 +10,8 @@ The Python package can be installed with pip as follows:
 pip install thread-chunks
 ```
 
+The PyPI page can be found here: [https://pypi.org/project/thread-chunks](https://pypi.org/project/thread-chunks).
+
 ### Requirements:
 
 Python >= 3.7
@@ -31,5 +33,5 @@ Source code can be found at: [https://github.com/Christopher-K-Long/thread-chunk
 
 ## Version and Changes
 
-The current version is [`1.0.1`](ChangeLog.md#release-101). Please see the [Change Log](ChangeLog.md) for more
+The current version is [`1.0.2`](ChangeLog.md#release-102). Please see the [Change Log](ChangeLog.md) for more
 details.
