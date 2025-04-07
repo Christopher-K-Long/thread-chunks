@@ -3,5 +3,6 @@ tqdm
 numpy
 cloudpickle
 saveable-objects
+furo
 myst-parser
 git+https://github.com/bayashi-cl/stubdoc
