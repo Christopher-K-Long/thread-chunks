@@ -2,6 +2,7 @@ User Guide
 ==========
 
 .. toctree::
+    :hidden:
     :titlesonly:
 
     getting_started
