@@ -26,3 +26,7 @@ from the root directory of thread-chunks to install all the requirements. Next t
 pytest
 ```
 from the root directory of thread-chunks.
+
+---
+
+[Previous](actors.md)

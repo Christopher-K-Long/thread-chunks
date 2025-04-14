@@ -9,6 +9,7 @@ User Guide
     chunking
     checkpointing
     actors
+    running_tests
 
 .. include:: overview.md
     :parser: myst_parser.sphinx_
