@@ -10,5 +10,9 @@
 - [Checkpointing](checkpointing.md)
 - [Actors](actors.md)
 
+## Running Tests
+
+ - [Running Tests](running_tests.md)
+
 ---
 [Next](getting_started.md)
