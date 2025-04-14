@@ -7,8 +7,8 @@ thread-chunks
 =============
 
 .. include:: ../README.md
-   :parser: myst_parser.sphinx_
-   :start-after: # thread-chunks
+    :parser: myst_parser.sphinx_
+    :start-after: # thread-chunks
 
 
 .. toctree::
@@ -18,4 +18,6 @@ thread-chunks
     user_guide/index
     reference/index
     ChangeLog.md.rst
-
+    License
+    GitHub <https://github.com/Christopher-K-Long/thread-chunks>
+    PyPI <https://pypi.org/project/thread-chunks/>

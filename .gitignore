@@ -1,4 +1,5 @@
 *.pyc
 .vscode
+.tox
 dist
 !.github

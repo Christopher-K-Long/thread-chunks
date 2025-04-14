@@ -1,5 +1,12 @@
 # [thread-chunks](README.md) Change Log
 
+## Release 1.0.4
+
+- Added the license to the documentation
+- Added link to the GitHub repository to the navigation pane in the documentation
+- Added a version consistency test
+- Added [tox](https://tox.wiki/) support for user testing.
+
 ## Release 1.0.3
 
 - Hid superfluous table of contents in the index page of the User Guide in the documentation;
