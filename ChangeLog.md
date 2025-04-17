@@ -1,5 +1,11 @@
 # [thread-chunks](README.md) Change Log
 
+## Release 1.0.5
+
+- Removed duplicated license tabs from the GitHub documentation
+- Improved the release automation
+- Enforced checks on ``date-released`` in ``CITATION.cff`` before a release can be published
+
 ## Release 1.0.4
 
 - Added the license to the documentation

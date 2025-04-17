@@ -33,5 +33,5 @@ Source code can be found at: [https://github.com/Christopher-K-Long/thread-chunk
 
 ## Version and Changes
 
-The current version is [`1.0.4`](ChangeLog.md#release-104). Please see the [Change Log](ChangeLog.md) for more
+The current version is [`1.0.5`](ChangeLog.md#release-105). Please see the [Change Log](ChangeLog.md) for more
 details.

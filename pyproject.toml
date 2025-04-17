@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "thread-chunks"
-version = "1.0.4"
+version = "1.0.5"
 authors = [
   { name="Christopher_K._Long", email="ckl45@cam.ac.uk" },
 ]

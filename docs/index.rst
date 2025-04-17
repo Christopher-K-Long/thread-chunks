@@ -18,6 +18,6 @@ thread-chunks
     user_guide/index
     reference/index
     ChangeLog.md.rst
-    License
+    include_license
     GitHub <https://github.com/Christopher-K-Long/thread-chunks>
     PyPI <https://pypi.org/project/thread-chunks/>
