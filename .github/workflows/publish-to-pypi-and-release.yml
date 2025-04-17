@@ -1,5 +1,4 @@
 name: Release and Publish Python distribution to PyPI
-
 on: workflow_dispatch
 
 jobs:
@@ -44,35 +43,12 @@ jobs:
         name: python-package-distributions
         path: dist/
 
-
-  publish-to-pypi:
-    name: >-
-      Publish Python distribution to PyPI
-    needs:
-    - build
-    runs-on: ubuntu-latest
-    environment:
-      name: pypi
-      url: https://pypi.org/p/thread-chunks
-    permissions:
-      id-token: write  # IMPORTANT: mandatory for trusted publishing
-
-    steps:
-    - name: Download all the dists
-      uses: actions/download-artifact@v4
-      with:
-        name: python-package-distributions
-        path: dist/
-    - name: Publish distribution to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-
-
   github-release:
     name: >-
       Sign the Python distribution with Sigstore
       and upload them to GitHub Release
     needs:
-    - publish-to-pypi
+    - build
     runs-on: ubuntu-latest
 
     permissions:
@@ -80,6 +56,7 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for sigstore
 
     steps:
+    - uses: actions/checkout@v4
     - name: Download all the dists
       uses: actions/download-artifact@v4
       with:
@@ -93,13 +70,13 @@ jobs:
           ./dist/*.whl
     - name: Get Version
       run: |
-        echo "VERSION=$(cat "../CITATION.cff" | perl -nle'print $& while m{(?<=^version:\s).*}g')" >> $GITHUB_OUTPUT
+        echo "VERSION=$(cat "CITATION.cff" | perl -nle'print $& while m{(?<=^version:\s).*}g')" >> $GITHUB_OUTPUT
       id: version
     - name: Create GitHub Release
       env:
         GITHUB_TOKEN: ${{ github.token }}
       run: |
-        RELEASE_NOTES=$(cat ChangeLog.md | grep -Pzo '(?<=##\sRelease\s${{ steps.version.outputs.VERSION }})[\S\s]*(?=##|$)' | tr -d '\0')
+        RELEASE_NOTES=$(cat ChangeLog.md | grep -Pzo '(?<=##\sRelease\s${{ steps.version.outputs.VERSION }})[\S\s]*?(?=##|$)' | tr -d '\0')
         if [ -z "$RELEASE_NOTES" ]; then
             echo "No release notes found."
             exit 1
@@ -112,6 +89,27 @@ jobs:
       # `dist/` contains the built packages, and the
       # sigstore-produced signatures and certificates.
       run: >-
-        gh release upload
-        "$GITHUB_REF_NAME" dist/**
+        gh release upload "v${{ steps.version.outputs.VERSION }}" dist/**
         --repo "$GITHUB_REPOSITORY"
+
+
+  publish-to-pypi:
+    name: >-
+      Publish Python distribution to PyPI
+    needs:
+    - github-release
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/saveable-objects 
+    permissions:
+      id-token: write  # IMPORTANT: mandatory for trusted publishing
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v4
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish distribution to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
