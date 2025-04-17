@@ -1,11 +1,26 @@
-name: Release and Publish Python distribution to PyPI and TestPyPI
+name: Release and Publish Python distribution to PyPI
 
 on: workflow_dispatch
 
 jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check date-released in CITATION.cff
+      run: |
+        DATE=$(cat CITATION.cff | perl -nle"print $& while m{(?<=date-released: ').*(?=')}g")
+        if [ "$DATE" != "$(date +%Y-%m-%d)" ]; then
+          echo "CITATION.cff date-released is not today. Please update it."
+          exit 1
+        fi
+
   build:
     name: Build distribution
     runs-on: ubuntu-latest
+    needs:
+    - checks
 
     steps:
     - uses: actions/checkout@v4
@@ -76,14 +91,20 @@ jobs:
         inputs: >-
           ./dist/*.tar.gz
           ./dist/*.whl
+    - name: Get Version
+      run: |
+        echo "VERSION=$(cat "../CITATION.cff" | perl -nle'print $& while m{(?<=^version:\s).*}g')" >> $GITHUB_OUTPUT
+      id: version
     - name: Create GitHub Release
       env:
         GITHUB_TOKEN: ${{ github.token }}
-      run: >-
-        gh release create
-        "$GITHUB_REF_NAME"
-        --repo "$GITHUB_REPOSITORY"
-        --notes ""
+      run: |
+        RELEASE_NOTES=$(cat ChangeLog.md | grep -Pzo '(?<=##\sRelease\s${{ steps.version.outputs.VERSION }})[\S\s]*(?=##|$)' | tr -d '\0')
+        if [ -z "$RELEASE_NOTES" ]; then
+            echo "No release notes found."
+            exit 1
+        fi
+        gh release create "v${{ steps.version.outputs.VERSION }}" --repo "$GITHUB_REPOSITORY" --title "v${{ steps.version.outputs.VERSION }}" --notes "${RELEASE_NOTES}"
     - name: Upload artifact signatures to GitHub Release
       env:
         GITHUB_TOKEN: ${{ github.token }}
