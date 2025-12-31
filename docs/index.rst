@@ -20,4 +20,5 @@ thread-chunks
     ChangeLog.md.rst
     include_license
     GitHub <https://github.com/Christopher-K-Long/thread-chunks>
+    GitLab (mirror) <https://gitlab.com/Christopher-K-Long/thread-chunks>
     PyPI <https://pypi.org/project/thread-chunks/>

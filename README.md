@@ -24,12 +24,15 @@ Packages:
 
 ## Documentation
 
-Documentation including worked examples can be found at: [https://thread-chunks.readthedocs.io/](https://thread-chunks.readthedocs.io/).
+Documentation, including worked examples, can be found at: [https://thread-chunks.readthedocs.io/](https://thread-chunks.readthedocs.io/).
 
 ## Source Code
 
 Source code can be found at: [https://github.com/Christopher-K-Long/thread-chunks](https://github.com/Christopher-K-Long/thread-chunks).
 
+A mirror can be found at: [https://gitlab.com/Christopher-K-Long/thread-chunks](https://gitlab.com/Christopher-K-Long/thread-chunks)
+
+Please submit all [pull requests](https://github.com/Christopher-K-Long/thread-chunks/pulls), [issues](https://github.com/Christopher-K-Long/thread-chunks/issues), [discussions](https://github.com/Christopher-K-Long/thread-chunks/discussions), and [vulnerability reports](https://github.com/Christopher-K-Long/thread-chunks/security) to the [GitHub](https://github.com/Christopher-K-Long/thread-chunks) repository.
 
 ## Version and Changes
 
