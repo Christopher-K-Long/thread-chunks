@@ -14,7 +14,7 @@ repository-code: 'https://github.com/Christopher-K-Long/thread-chunks'
 url: 'https://thread-chunks.readthedocs.io'
 repository: 'https://pypi.org/project/thread-chunks'
 abstract: >-
-  A python package for performing memory intensive computations in parallel
+  A Python package for performing memory intensive computations in parallel
   using chunks and checkpointing.
 keywords:
   - thread
