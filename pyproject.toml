@@ -11,7 +11,7 @@ authors = [
 maintainers = [
   { name="Christopher K. Long", email="ckl45@cam.ac.uk" },
 ]
-description = "A Python package for performing memory intensive computations in parallel using chunks and checkpointing."
+description = "A Python package for performing memory-intensive computations in parallel using chunks and checkpointing."
 keywords = ["thread", "threading", "multithreading", "parallel", "parallelisation", "checkpointing", "chunk", "chunking", "chunks"]
 readme = "README.md"
 requires-python = ">=3.7"
