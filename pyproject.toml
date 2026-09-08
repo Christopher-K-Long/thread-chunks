@@ -6,10 +6,10 @@ build-backend = "hatchling.build"
 name = "thread-chunks"
 version = "1.0.5"
 authors = [
-  { name="Christopher_K._Long", email="ckl45@cam.ac.uk" },
+  { name="Christopher K. Long", email="ckl45@cam.ac.uk" },
 ]
 maintainers = [
-  { name="Christopher_K._Long", email="ckl45@cam.ac.uk" },
+  { name="Christopher K. Long", email="ckl45@cam.ac.uk" },
 ]
 description = "A python package for performing memory intensive computations in parallel using chunks and checkpointing."
 keywords = ["thread", "threading", "multithreading", "parallel", "parallelisation", "checkpointing", "chunk", "chunking", "chunks"]
